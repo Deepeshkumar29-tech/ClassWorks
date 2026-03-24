@@ -1,0 +1,13 @@
+class Solution {
+    public boolean canAliceWin(int[] nums) {
+        int ss=0,ds=0;
+        for(int i:nums){
+            if(i<10){
+                ss+=i;
+            }else{
+                ds+=i;
+            }
+        }
+        return ss!=ds;
+    }
+}
