@@ -1,0 +1,21 @@
+import  java.util.Scanner;
+public class String3 {
+    public static void main(String[] args) {
+        String str="madam";
+        int l=0;
+        int r=str.length()-1;
+        boolean flag=true;
+        while(l<r){
+            if(str.charAt(l)==str.charAt(r)){
+                flag=false;
+            }
+            l++;
+            r--;
+        }
+        if(flag){
+            System.out.println("true");
+        }else{
+            System.out.println("false");
+        }
+    }
+}

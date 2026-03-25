@@ -1,0 +1,22 @@
+import java.util.*;
+class string5{
+    public static void main(String[] args){
+        String str="Hello@123";
+        int alphacount=0;
+        int digitcount=0;
+        int specialcount=0;
+        for(int i=0;i<str.length();i++){
+            char ch=str.charAt(i);
+            if((ch>='a'&&ch<='z')||(ch>='A'&&ch<='Z')){
+                alphacount++;
+            }else if((ch>='0'&&ch<='9')){
+                digitcount++;
+            }else{
+                specialcount++;
+            }
+        }
+        System.out.println("alphacount:"+alphacount);
+        System.out.println("digitcount:"+digitcount);
+        System.out.println("specialcount:"+specialcount);
+    }
+}

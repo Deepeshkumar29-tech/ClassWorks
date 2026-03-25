@@ -1,0 +1,20 @@
+import java.util.*;
+class String4{
+    public static void main(String[] args){
+        String str1 = "hello";
+        int vowelcount=0;
+        int consonantcount=0;
+        for(int i=0;i<str1.length();i++){
+            char ch=str1.charAt(i);
+            if(ch>='a'&&ch<='z'){
+                if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'){
+                    vowelcount++;
+                }else{
+                    consonantcount++;
+                }
+            }
+        }
+        System.out.println("vowelcount:"+vowelcount);
+        System.out.println("consonantcount:"+consonantcount);
+    }
+}

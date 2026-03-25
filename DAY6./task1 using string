@@ -1,0 +1,15 @@
+import java.util.*;
+class tasktest{
+    public static void main(String[] args){
+        String str="h e l l o";
+        String str1="";
+        for(int i=0;i<str.length();i++){
+            char ch=str.charAt(i);
+            if(ch>='a'&&ch<='z'){
+                str1=str1+ch;
+            }
+
+            }
+        System.out.println(str1);
+        }
+    }
