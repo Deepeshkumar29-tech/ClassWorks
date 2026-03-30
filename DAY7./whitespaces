@@ -1,0 +1,21 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by Fernflower decompiler)
+//
+
+import java.util.Scanner;
+
+class removingwhitespaces {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        str.trim();
+        String[] a = str.split("\\s+");
+        if (str.isEmpty()) {
+            System.out.println("0");
+        } else {
+            System.out.println(a.length);
+        }
+
+    }
+}

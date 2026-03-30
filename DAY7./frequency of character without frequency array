@@ -1,0 +1,44 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by Fernflower decompiler)
+//
+
+import java.io.PrintStream;
+import java.util.Scanner;
+
+public class withoutfreq {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+
+        for(int i = 0; i < str.length(); ++i) {
+            boolean flag = false;
+
+            for(int j = 0; j < i; ++j) {
+                if (str.charAt(i) == str.charAt(j)) {
+                    flag = true;
+                    break;
+                }
+            }
+
+            if (!flag) {
+                int count = 1;
+
+                for(int k = i + 1; k < str.length(); ++k) {
+                    if (str.charAt(k) == str.charAt(i)) {
+                        ++count;
+                    }
+                }
+
+                if (str.charAt(i) == ' ') {
+                    System.out.println("_:" + count);
+                } else {
+                    PrintStream var10000 = System.out;
+                    char var10001 = str.charAt(i);
+                    var10000.println(var10001 + ":" + count);
+                }
+            }
+        }
+
+    }
+}

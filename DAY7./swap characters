@@ -1,0 +1,21 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by Fernflower decompiler)
+//
+
+public class strings {
+    public static void main(String[] args) {
+        String str = "Hello";
+        char[] arr = str.toCharArray();
+        int l = 0;
+
+        for(int r = str.length() - 1; l < r; --r) {
+            char temp = arr[l];
+            arr[l] = arr[r];
+            arr[r] = temp;
+            ++l;
+        }
+
+        System.out.println(new String(arr));
+    }
+}

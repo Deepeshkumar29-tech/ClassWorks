@@ -1,0 +1,29 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by Fernflower decompiler)
+//
+
+import java.util.Scanner;
+
+class removingspacewithoutinbuilt {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        int count = 0;
+        boolean flag = true;
+
+        for(int i = 0; i < s.length(); ++i) {
+            char ch = s.charAt(i);
+            if (ch != ' ') {
+                if (flag) {
+                    ++count;
+                    flag = false;
+                }
+            } else {
+                flag = true;
+            }
+        }
+
+        System.out.println(count);
+    }
+}
