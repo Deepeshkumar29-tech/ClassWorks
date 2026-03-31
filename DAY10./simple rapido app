@@ -1,0 +1,76 @@
+class Ride{
+    String Name;
+    String pickup;
+    String drop;
+    List <String> stop=new ArrayList<>();
+    double fare;
+    String status;
+    Ride(String Name,String pickup,String drop){
+        this.Name=Name;
+        this.pickup=pickup;
+        this.stop=new ArrayList<>();
+        this.drop=drop;
+        this.status="BOOKED";
+        this.fare=Calculation();
+
+    }
+    double Calculation(){
+        return 50(stop.length()*50);
+    }
+    void showDetails(){
+        System.out.println("Name"+":"+this.name);
+        System.out.println("pickup"+":"+this.pickup);
+        System.out.println("Drop"+":"+this.drop);
+        System.out.println("Status"+":"+this.status);
+        for(String str:stop){
+            System.out.print("---->"+this.str);
+        }
+        System.out.println("Fare"+":"+this.fare);
+        Ride(String Name,String pickup,String drop,List<String> stop){
+         this.Name=Name;
+         this.pickup=pickup;
+         this.drop=drop;
+         this.status="BOOKED";
+         this.fare=Calculation();
+        }
+        public void cancelride(){
+            if(this.status.equals("CANCELLED")){
+                System.out.println("Already Cancelled");
+            }else if(this.status.equals("COMPLETED")){
+                System.out.println("Already Completed");
+            }else{
+                this.status="CANCELLED";
+                this.fare=0;
+                System.out.println("Cancelled Successfully");
+            }
+        }
+        public void CompleteRide(){
+            if(this.status.equals("COMPLETED")){
+                System.out.println("Already Completed");
+            }else if(this.status.equals("CANCELLED")){
+                System.out.println("Already Cancelled");
+            }else{
+                this.status="COMPLETED";
+                System.out.println("Completed successfully");
+            }
+        }
+        Class Main{
+            public static void main(String[] args){
+                Ride r1=new Ride("ram","St.joseph","Tnagar");
+                r1.showDetails();
+                List <String> stop=new ArrayList<>();
+                stop.add("Airport");
+                stop.add("NOOOOOOOOOOOO");
+                Ride r2=new Ride("rock","Tambaram","Tnagar",stop);
+                r2.showDetails();
+                r1.cancelride();
+                r1.showDetails();
+                r2.CompleteRide();
+                r2.showDetails();
+
+            }
+        }
+
+
+    }
+}
